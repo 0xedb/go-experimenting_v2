@@ -7,11 +7,13 @@ type Node struct {
   next *Node
 }
 
-func (v Node) printData() string {
-  return v.data;
+type Stringly string
+
+func (v Stringly) printData()  {
+  fmt.Println(">>>>>>>>>>", v)
 }
 
 func main() {
-  node := Node{"bruno", nil}
-  fmt.Println(node.printData())
+  singl := Stringly("bruno edoh")
+  singl.printData()
 }

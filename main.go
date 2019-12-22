@@ -24,7 +24,8 @@ func (human *Human) setInfo(name string, age uint16) {
 }
 
 func main() {
-  bruno := Human{"kofi", 39}
-  bruno_ptr := &bruno 
-  fmt.Println(*bruno_ptr)
+  bruno := &Human{"kofi", 39}
+  // bruno_ptr := &bruno 
+  fmt.Println(*bruno)
 }
+

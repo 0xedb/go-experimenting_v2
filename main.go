@@ -23,9 +23,22 @@ func (human *Human) setInfo(name string, age uint16) {
   human.age = age
 }
 
+type walkable interface {
+  kind() string
+  distance() float64
+}
+
+func (vv Human) kind() string {
+  return "I am kinda kind"
+}
+
+func (vv Human) distance() float64 {
+  return 14.23
+}
+
 func main() {
-  bruno := &Human{"kofi", 39}
-  // bruno_ptr := &bruno 
-  fmt.Println(*bruno)
+  bruno := &Human{"kofi", 39} 
+  fmt.Println(bruno.distance())
+  fmt.Println(bruno.kind())
 }
 

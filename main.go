@@ -7,6 +7,9 @@ import (
  
 
 func main() {
-	const factor = iota
-  fmt.Printf("%v---%T", factor)
+	var mm  map[int]string
+  if mm == nil {
+    fmt.Println("mm is nil")
+  }
+  fmt.Println(mm)
 }

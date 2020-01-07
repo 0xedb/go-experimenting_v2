@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"sync"
+  "time"
 )
 
 func writeSomething(msg string, num int, wg *sync.WaitGroup) {
@@ -10,6 +11,7 @@ func writeSomething(msg string, num int, wg *sync.WaitGroup) {
 	go func() {
 		for i := 0; i < num; i++ {
 			fmt.Println(msg)
+      time.Sleep(100 * time.Microsecond)
 		}
 		wg.Done()
 	}()
